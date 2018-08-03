@@ -13,5 +13,5 @@ def toutc(timestamp = None):
 def togmt9(timestamp = None):
     utc = toutc(timestamp)['datetime']
     gmt9 = utc + datetime.timedelta(hours=9)
-    gmt9_strf = gmt9.strftime("%Y-%m-%d %H:%M:%S m : %f, +00:00 (UTC)")
+    gmt9_strf = gmt9.strftime("%Y-%m-%d %H:%M:%S m : %f, +09:00 (UTC)")
     return {'strf' : gmt9_strf, 'timestamp' : gmt9.timestamp(), 'datetime' : gmt9}
